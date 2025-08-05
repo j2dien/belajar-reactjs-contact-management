@@ -14,7 +14,7 @@ export default function UserLogout() {
 
     if (response.status === 200) {
       setToken("");
-      navigate({
+      await navigate({
         pathname: "/login",
       });
     } else {
