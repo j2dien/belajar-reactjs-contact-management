@@ -1,14 +1,17 @@
+import { Link, useParams } from "react-router";
+
 export default function AddressCreate() {
+  const { id } = useParams();
   return (
     <>
       <div>
         <div className="flex items-center mb-6">
-          <a
-            href="detail_contact.html"
+          <Link
+            to={`/dashboard/contacts/${id}`}
             className="text-blue-400 hover:text-blue-300 mr-4 flex items-center transition-colors duration-200"
           >
             <i className="fas fa-arrow-left mr-2" /> Back to Contact Details
-          </a>
+          </Link>
           <h1 className="text-2xl font-bold text-white flex items-center">
             <i className="fas fa-plus-circle text-blue-400 mr-3" /> Add New
             Address
@@ -141,12 +144,12 @@ export default function AddressCreate() {
                 </div>
               </div>
               <div className="flex justify-end space-x-4">
-                <a
-                  href="detail_contact.html"
+                <Link
+                  to={`/dashboard/contacts/${id}`}
                   className="px-5 py-3 bg-gray-700 text-white rounded-lg hover:bg-gray-600 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2 focus:ring-offset-gray-800 transition-all duration-200 flex items-center shadow-md"
                 >
                   <i className="fas fa-times mr-2" /> Cancel
-                </a>
+                </Link>
                 <button
                   type="submit"
                   className="px-5 py-3 bg-gradient text-white rounded-lg hover:opacity-90 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:ring-offset-gray-800 transition-all duration-200 font-medium shadow-lg transform hover:-translate-y-0.5 flex items-center"
